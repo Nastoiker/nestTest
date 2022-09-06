@@ -1,0 +1,12 @@
+name: Public Docker
+on: 
+  push:
+    branches: [master]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    step: 
+      - uses: action/checkout@master
+      - name: Publish to registry
+       uses: 
